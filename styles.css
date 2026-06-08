@@ -1007,6 +1007,9 @@ h3 {
 @media (max-width: 860px) {
   .site-header {
     border-radius: 1.1rem;
+    top: 0.75rem;
+    width: min(70rem, calc(100% - 1rem));
+    padding: 0.55rem;
   }
 
   .nav-links {
@@ -1018,8 +1021,26 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    gap: 1.25rem;
+    min-height: auto;
+    padding-top: 7rem;
+  }
+
+  .hero-bg::before {
+    inset: 2rem -12rem auto auto;
+    width: 35rem;
+    height: 44rem;
+    opacity: 0.46;
+  }
+
   .profile-glass {
     justify-self: start;
+    transform: none;
+  }
+
+  .profile-glass:hover {
+    transform: translateY(-0.25rem);
   }
 
   .service-grid,
@@ -1035,6 +1056,7 @@ h3 {
   .hero-ghost-left {
     left: -10rem;
     width: 34rem;
+    opacity: 0.08;
   }
 
   .work-card {
@@ -1060,6 +1082,10 @@ h3 {
 }
 
 @media (max-width: 560px) {
+  .cursor-glow {
+    display: none;
+  }
+
   .brand span:last-child {
     display: none;
   }
@@ -1072,11 +1098,61 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding-top: 7.5rem;
+    padding: 6.4rem 1rem 2.6rem;
   }
 
   h1 {
-    font-size: 3.15rem;
+    font-size: clamp(2.35rem, 13vw, 3.05rem);
+    line-height: 0.98;
+  }
+
+  h2 {
+    font-size: clamp(1.85rem, 10vw, 2.45rem);
+    line-height: 1.04;
+  }
+
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primary-btn,
+  .ghost-btn {
+    width: 100%;
+    min-height: 3rem;
+    padding-inline: 0.9rem;
+    text-align: center;
+  }
+
+  .hero-bg::before {
+    inset: 7.5rem -17rem auto auto;
+    width: 31rem;
+    height: 39rem;
+    opacity: 0.34;
+  }
+
+  .profile-glass {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 1rem;
+  }
+
+  .hero-portrait img {
+    max-height: 22rem;
+  }
+
+  .profile-name {
+    font-size: 1.2rem;
+  }
+
+  .profile-stats span {
+    padding: 0.65rem;
+    font-size: 0.86rem;
   }
 
   .service-grid,
@@ -1091,23 +1167,118 @@ h3 {
 
   .views-widget {
     grid-template-columns: 1fr;
+    gap: 0.7rem;
+    padding: 0.85rem;
+  }
+
+  .views-widget strong {
+    font-size: 2.35rem;
+  }
+
+  .chart-bars {
+    justify-content: start;
+    min-height: 3.4rem;
+  }
+
+  .marquee-track {
+    gap: 0.65rem;
+    padding: 0.75rem;
+  }
+
+  .marquee-track span {
+    min-width: 7.5rem;
+    padding: 0.7rem 0.85rem;
+    font-size: 0.88rem;
   }
 
   .hero-ghost-left {
-    left: -14rem;
-    bottom: 6rem;
-    width: 33rem;
+    left: -13rem;
+    bottom: 12rem;
+    width: 30rem;
+    opacity: 0.055;
+  }
+
+  .section,
+  .portfolio-section,
+  .about-section,
+  .cta-section {
+    width: min(100% - 1rem, 70rem);
+  }
+
+  .section,
+  .portfolio-section {
+    padding: 3rem 0;
+  }
+
+  .service-card {
+    min-height: 12rem;
+    padding: 1rem;
   }
 
   .about-bg-person {
-    right: -18rem;
-    width: 44rem;
-    opacity: 0.16;
+    right: -22rem;
+    bottom: 1rem;
+    width: 43rem;
+    opacity: 0.12;
+  }
+
+  .about-panel {
+    display: grid;
+    gap: 0.75rem;
+    min-height: auto;
+    padding: 0.75rem;
+  }
+
+  .floating-card,
+  .card-one,
+  .card-two,
+  .card-three {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    animation: none;
+  }
+
+  .portfolio-results {
+    gap: 0.75rem;
+  }
+
+  .work-card {
+    flex-basis: 12.5rem;
+    height: 17.5rem;
+  }
+
+  .work-card.tall {
+    flex-basis: 11rem;
+    height: 22rem;
+  }
+
+  .work-card:hover {
+    transform: none;
   }
 
   .portfolio-carousel::before,
   .portfolio-carousel::after {
     width: 2.5rem;
+  }
+
+  .ig-note {
+    padding: 0.52rem 0.7rem;
+    font-size: 0.72rem;
+  }
+
+  .note-top {
+    top: 6.1rem;
+    right: 0.75rem;
+  }
+
+  .note-mid {
+    top: 39rem;
+    left: 0.75rem;
+  }
+
+  .note-end {
+    display: none;
   }
 
   .tile-large,
