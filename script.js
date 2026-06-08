@@ -25,7 +25,7 @@ const viewsCounter = document.querySelector(".views-counter");
 if (viewsCounter) {
   const target = Number(viewsCounter.dataset.target || "160995");
   const formatter = new Intl.NumberFormat("pt-BR");
-  const duration = 2200;
+  const duration = 2600;
   const pause = 1200;
 
   const animateCounter = () => {

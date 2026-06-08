@@ -935,6 +935,7 @@ h3 {
   display: flex;
   width: max-content;
   gap: 1rem;
+  will-change: transform;
   animation: portfolioMove 42s linear infinite;
 }
 
@@ -1086,14 +1087,24 @@ h3 {
     display: none;
   }
 
+  .brand {
+    min-width: 0;
+    gap: 0.45rem;
+  }
+
   .brand span:last-child {
-    display: none;
+    display: inline;
+    max-width: 8.8rem;
+    overflow: hidden;
+    font-size: 0.78rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .header-cta {
     min-height: 2.4rem;
-    padding: 0 0.85rem;
-    font-size: 0.85rem;
+    padding: 0 0.75rem;
+    font-size: 0.78rem;
   }
 
   .hero {
@@ -1227,6 +1238,7 @@ h3 {
     gap: 0.75rem;
     min-height: auto;
     padding: 0.75rem;
+    overflow: visible;
   }
 
   .floating-card,
@@ -1235,8 +1247,13 @@ h3 {
   .card-three {
     position: relative;
     inset: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
     width: 100%;
     animation: none;
+    transform: none;
   }
 
   .portfolio-results {
@@ -1244,13 +1261,13 @@ h3 {
   }
 
   .work-card {
-    flex-basis: 12.5rem;
-    height: 17.5rem;
+    flex: 0 0 11.5rem;
+    height: 16.5rem;
   }
 
   .work-card.tall {
-    flex-basis: 11rem;
-    height: 22rem;
+    flex-basis: 10rem;
+    height: 20rem;
   }
 
   .work-card:hover {
@@ -1260,6 +1277,11 @@ h3 {
   .portfolio-carousel::before,
   .portfolio-carousel::after {
     width: 2.5rem;
+  }
+
+  .portfolio-track {
+    gap: 0.75rem;
+    animation-duration: 30s;
   }
 
   .ig-note {
